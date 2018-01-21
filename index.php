@@ -2,9 +2,9 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 //Adiciona a classe DatabaseCon
-require '../src/config/db.php';
+require './src/config/db.php';
 
 $app = new \Slim\App;
 $app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
@@ -14,6 +14,6 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
     return $response;
 });
 
-require '../src/routes/animals.php';
+require './src/routes/animals.php';
 
 $app->run();
